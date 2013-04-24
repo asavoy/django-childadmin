@@ -5,8 +5,8 @@ from django.core import urlresolvers
 from django.utils.encoding import force_unicode
 from django.utils.translation import ugettext_lazy as _
 
-from adminlinkinline.tree.introspection import get_foreign_key_desciptors
-from adminlinkinline.tree.admin.formsets import VisiblePrimaryKeyFormset
+from childadmin.tree.introspection import get_foreign_key_desciptors
+from childadmin.tree.admin.formsets import VisiblePrimaryKeyFormset
 
 
 class ForeignKeyAwareModelAdmin(admin.ModelAdmin):
@@ -19,7 +19,7 @@ class ForeignKeyAwareModelAdmin(admin.ModelAdmin):
     
     usage::
     
-        from django_admin_link_inline.tree.admin.relation import ForeignKeyAwareModelAdmin
+        from childadmin.tree.admin.relation import ForeignKeyAwareModelAdmin
         
         class SomeAdmin(ForeignKeyAwareModelAdmin):
             children = [SomeModelThatPointsToUs, AnotherModelThatPointsTous]
@@ -41,8 +41,8 @@ class ForeignKeyAwareModelAdmin(admin.ModelAdmin):
         
     .. attribute:: parent_link
         
-        To have sane breadcrumbs if the :class:`~django_admin_link_inline.tree.admin.relation.ForeignKeyAwareModelAdmin`
-        is used as child of another :class:`~django_admin_link_inline.tree.admin.relation.ForeignKeyAwareModelAdmin`
+        To have sane breadcrumbs if the :class:`~childadmin.tree.admin.relation.ForeignKeyAwareModelAdmin`
+        is used as child of another :class:`~childadmin.tree.admin.relation.ForeignKeyAwareModelAdmin`
         and make the save button return to the parent instead of the app listing, the
         ``parent_link`` should be set.
         
@@ -89,7 +89,7 @@ class ForeignKeyAwareModelAdmin(admin.ModelAdmin):
 
     class Media:
         js = (
-            'adminlinkinline/js/adminoverride.js',
+            'childadmin/js/adminoverride.js',
         )
 
     def change_view(self, request, object_id, form_url='', extra_context=None):
@@ -157,7 +157,7 @@ class InvisibleModelMixin(admin.ModelAdmin):
 class InvisibleModelAdmin(InvisibleModelMixin):
     """
     An admin class that can be used as admin for children
-    of :class:`~adminlinkinline.tree.admin.relation.ForeignKeyAwareModelAdmin`.
+    of :class:`~childadmin.tree.admin.relation.ForeignKeyAwareModelAdmin`.
     
     This way they will be hidden in the admin interface
     so they can only be accessed via ``ForeignKeyAwareModelAdmin``.
@@ -165,7 +165,7 @@ class InvisibleModelAdmin(InvisibleModelMixin):
         
         from django.db import models
         from django.contrib import admin
-        from adminlinkinline.tree.admin.relation import *
+        from childadmin.tree.admin.relation import *
         
         class Bar(models.Model):
             foo = models.ForeignKey(Foo, related_name='bars')
@@ -179,7 +179,7 @@ class InvisibleModelAdmin(InvisibleModelMixin):
         
     .. attribute:: parent_link
         
-        When :class:`~adminlinkinline.tree.admin.relation.InvisibleModelAdmin`
+        When :class:`~childadmin.tree.admin.relation.InvisibleModelAdmin`
         is used, it is no longer displayed in the admin listing as an editable
         model. To have sane breadcrumbs and make the save button return to the
         parent instead of the app listing, the ``parent_link`` should be set.

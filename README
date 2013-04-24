@@ -1,7 +1,7 @@
-AdminLinkInline
+django-childadmin
 ====================================================================
 
-AdminLinkInline allows related models to be linked in with
+`django-childadmin` allows related models to be linked in with
 parent models in the admin section of Django applications.
 
 It began life as a fork of easymode:

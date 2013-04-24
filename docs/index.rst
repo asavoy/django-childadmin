@@ -1,7 +1,7 @@
-AdminLinkInline
+django-childadmin
 ======================================================
 
-With AdminLinkInline you can link a model to related models through foreign key
+`django-childadmin` is focused on linking parent models with child models.
 
 Manual
 ======
@@ -15,24 +15,18 @@ Manual
 Installation
 ============
 
-You can download AdminLinkInline from:
+You can download `django-childadmin` from:
 
-https://github.com/asavoy/django-admin-link-inline/
+https://github.com/asavoy/django-childadmin/
 
 Or you can do:
 
-- ``pip install -e git://github.com/asavoy/django-admin-link-inline.git#egg=linkadmin``
-
-Note the version number in the top left corner and use:
-
-- ``easy_install http://github.com/asavoy/django-admin-link-inline.git/tarball/[VERSION]``
-
-Which, if the version was v0.1.0 would become http://github.com/asavoy/django-admin-link-inline/tarball/v0.1.0.
+- ``pip install -e git://github.com/asavoy/django-childadmin.git#egg=childadmin``
 
 
 Requirements
 ============
 
-AdminLinkInline requires python 2.7, furthermore the following packages must be installed:
+`django-childadmin` requires python 2.7, furthermore the following packages must be installed:
 
 - Django

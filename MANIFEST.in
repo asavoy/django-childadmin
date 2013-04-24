@@ -5,4 +5,4 @@ include docs/conf.py
 include docs/Makefile
 include docs/index.rst
 recursive-include docs/tree *.rst *.png
-recursive-include adminlinkinline *.py *.html *.js
+recursive-include childadmin *.py *.html *.js

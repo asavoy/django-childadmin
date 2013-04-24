@@ -7,7 +7,7 @@ from django.forms import IntegerField
 from django.forms.formsets import BaseFormSet
 from django.utils.translation import ugettext_lazy as _
 
-from adminlinkinline.tree.admin.widgets.foreignkey import RenderLink
+from childadmin.tree.admin.widgets.foreignkey import RenderLink
 
 class VisiblePrimaryKeyFormset(BaseModelFormSet):
     """
