@@ -1,11 +1,8 @@
 include README
 include LICENSE
 include MANIFEST.in
-include TODO
 include docs/conf.py
 include docs/Makefile
 include docs/index.rst
 recursive-include docs/tree *.rst *.png
-recursive-include docs/utils *.rst
-recursive-include example *.py *.txt *.html *.po *.xml *.xslt *.xsl *.js
-recursive-include adminlinkinline *.py *.txt *.html *.po *.xml *.xslt *.xsl *.js
+recursive-include childadmin *.py *.html *.js

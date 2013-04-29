@@ -1,5 +1,17 @@
 .. _oldtree_explanation:
 
+
+
+
+
+# TODO: Either kill docs or maintain them so they don't promise things the
+# ...   code is incapable of delivering.
+# TODO: Rename `adminlinkinline` to `django-childadmin` as appropriate.
+
+
+
+
+
 Admin support for model trees with more than 2 levels of related items (deprecated)
 ===================================================================================
 

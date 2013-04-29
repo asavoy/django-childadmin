@@ -1,3 +1,4 @@
+# TODO: This file is probably not maintained...
 
 # Makefile for Sphinx documentation
 #

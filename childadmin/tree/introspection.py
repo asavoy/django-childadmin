@@ -9,7 +9,7 @@ from django.db.models.fields.related import ForeignRelatedObjectsDescriptor, Sin
 INTROSPECTION_ERROR = """
 %s
 
-django_admin_link_inline caught an AttributeError while trying
+childadmin caught an AttributeError while trying
 to inspect %s looking for %s.
 """
 

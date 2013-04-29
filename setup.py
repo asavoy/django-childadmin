@@ -4,8 +4,8 @@ import re
 from distutils.core import setup
 from distutils.command.install import INSTALL_SCHEMES
 
-description="""AdminLinkInline to allow related models to be linked in with
-parent models in the admin section"""
+description="""childadmin to allow related child models to be linked in with
+parent models in the Django admin section"""
 
 version = '1.0'
 packages = []
@@ -30,7 +30,7 @@ def fullsplit(path, result=None):
 
 PYC = re.compile(r'.*\.py[co]$')
 
-for dirpath, dirnames, filenames in os.walk('adminlinkinline'):
+for dirpath, dirnames, filenames in os.walk('childadmin'):
     print dirpath, dirnames, filenames
     # Ignore dirnames that start with '.'
     for i, dirname in enumerate(dirnames):
@@ -43,13 +43,13 @@ for dirpath, dirnames, filenames in os.walk('adminlinkinline'):
         ])
 
 
-setup(name='adminlinkinline',
+setup(name='childadmin',
       version=version,
       description='Show related models through parent model in admin section',
       author='L. van de Kerkhof',
       author_email='easymode@librelist.com',
       maintainer='Mathspace',
-      keywords='admin link inline django related models',
+      keywords='admin django related models parent child',
       long_description=description,
       packages=packages,
       data_files=data_files,
